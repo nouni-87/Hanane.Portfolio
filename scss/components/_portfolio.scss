@@ -1,0 +1,160 @@
+/* ============================================= */
+/*          PORTFOLIO                    */
+/* ============================================= */
+
+
+.proj {
+    &-skills {
+        width: 100%;
+        padding-left: 30px;
+        padding-right: 30px;
+    }
+}
+
+
+.mywork-port,
+.skills {
+    
+  @include shadow;
+  
+ }
+
+ .abt-me {
+    @include shadow;
+    border-radius: 10px;
+    transition: all .8s ease;
+    margin-right: 50px;
+    margin-left: 50px;
+    /* padding: .8em; */
+ }
+
+ .abt-me {
+     &:hover {
+         @include skew;
+        text-shadow: rgb(243, 105, 128) 1px 0 10px;
+     }
+ }
+
+ .mywork-port,
+ .skills {
+   &:hover {
+    @include skew;
+    transition: 1s; 
+    /* transform: rotate3d(1, 0, 0, 45deg); */
+    }
+}
+
+ .work-txt {
+    font-size: 20px;
+    text-align: center;
+    margin-right: 20px;
+}
+
+
+
+
+.port-project {
+   
+    margin-left: 15px;
+    padding-bottom: 30px;
+    padding-left: 30px;
+    @media (min-width: 768px) {
+        margin: auto 0;
+        padding: 0;
+    }
+}
+
+
+
+.card-img-top {
+    height: 250px;
+    @extend %card-border;
+}
+.img-top {
+    @extend %card-border;
+}
+
+.img-top,
+.card,
+.card-slide {
+    width: 90%;
+    height: 250px;
+}
+
+.photo {
+    position: relative;
+    line-height: 1;
+    margin-bottom: 0.8em;
+    overflow: hidden;
+}
+
+.slide {
+    .photo-overlay {
+        opacity: 1;
+        background: $btn-link;
+    }
+}
+
+.slide {
+    .card-body {
+        transform: translateX(-100%);
+        @include tranSlide;
+    }
+    .card-img-top {
+        @include tranSlide;
+}
+} 
+
+
+.slide {
+    &:hover {
+        .card-body {
+            transform: translateX(0);
+        }
+    }
+}
+
+
+
+
+.card-body {
+    @extend %shorthand;
+    @extend %card-border;
+    height: 250px;
+    color: $white-color;
+    background: rgba(0,0,0, .65);
+    position: absolute;
+    opacity: 0;
+    transition-property: opacity;
+    transition-duration: .5s;
+    &:hover {
+        opacity: 1;
+        background-color: $btn-link;
+    }
+}
+
+.btn-primary {
+    width: 90%;
+    font-weight: 700;
+    display: block;
+    text-decoration: none;
+    text-transform: uppercase;
+    padding: 10px 0;
+}
+.card-text {
+   
+  width: 90%;
+  height: 250px;
+
+}
+
+.card-title {
+    font-size: 1.3em;
+    line-height: 1.25em;
+    margin-top: .85em;
+    margin-bottom: .5em;
+}
+
+
+
+
