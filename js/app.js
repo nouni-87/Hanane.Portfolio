@@ -32,5 +32,19 @@ form.addEventListener("submit", function(event) {
 
 });
 
-
-
+//click on the button "skills-bar" to indicate how far is "the progressBar" in %
+const skillsBtns = document.querySelectorAll('.skills-btn');
+skillsBtns.forEach(skillsBtn => {
+  skillsBtn.addEventListener("click", e => {
+    const percentageSpan = e.target.nextElementSibling;
+    const percentageNumber = percentageSpan.textContent;
+    const number = percentageNumber.replace('%', '');
+    const progressBar = e.target.nextElementSibling.nextElementSibling;
+    for (let i = 1; i < number; i++) {
+      setTimeout(() => {
+        progressBar.setAttribute('value', i);
+      }, 500);
+  }
+    percentageSpan.style.display = 'block';
+  });
+});

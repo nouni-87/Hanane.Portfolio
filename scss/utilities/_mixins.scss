@@ -39,3 +39,8 @@
     color: $white-color;
     text-align: center;
 }
+
+@mixin font {
+    font-family: 'Zen Dots', cursive;
+    font-weight: 300;
+}

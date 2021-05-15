@@ -39,7 +39,7 @@
         color: $white-color;
             &:hover,
             &:active {
-                color: #000; transform: skewX(12deg) translateX(5px); 
+                color: $black; transform: skewX(12deg) translateX(5px); 
                 transform: skewX(12deg) translateX(-5px);
                 transition: .8s; 
             }
@@ -62,13 +62,14 @@
 .navbar {
     background-color: $nav-color;
 }
- .body, 
- .header {
-    background-color: rgba(255, 255, 255, 0.26);
-     /* background-color: rgb(218, 218, 228); */
- }
 
- .nav2 {
+ 
+.body, 
+.header {
+    background-color: rgba(255, 255, 255, 0.26);
+}
+
+.nav2 {
     a {
         display: inline-block;
         padding-top: .3125rem;
@@ -81,7 +82,7 @@
      }
  }
 
- .nav {
+.nav {
     justify-content: center;
     display: block;
     margin: 0 auto;
@@ -104,10 +105,10 @@
 
 .svg-link {
     &:hover {
-        fill: rgb(196, 120, 133);
+        fill: $btn-link;
         transform: scale(2) rotate(360deg);
         transition: .8s;
-     }
+    }
 }
 
 /* ============================================= */

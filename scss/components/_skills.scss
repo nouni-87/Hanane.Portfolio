@@ -2,19 +2,10 @@
 /*            SKILLS                 */
 /* ============================================= */
 
-body {
-    font: 13px/20px "Lucida Grande", Tahoma, Verdana, sans-serif;
-    color: #404040;
-    background: #2a2a2a;
-  }
-  
-  .container {
+.container {
     margin: 60px auto;
     width: 400px;
     text-align: center;
-  }
-  
-  .container {
     .progress {
         @extend %pro-shadow;
         margin: 0 auto;
@@ -29,39 +20,38 @@ body {
   }
   
  
-  
-.progress-bar {
+.percentage {
+    display: none;
+    width: 5%;
+    text-align: center;
+}
+
+.progress {
+    margin-bottom: 15px;
+    padding-top: 5px;
+    padding-left: 5px;
+    padding-right: 5px;
+    &-bar {
         height: 16px;
         border-radius: 4px;
         background-image: linear-gradient(to bottom, rgba(255, 255, 255, 0.3), rgba(255, 255, 255, 0.05));
         transition: 0.4s linear;
         transition-property: width, background-color;
         box-shadow: 0 0 1px 1px rgba(0, 0, 0, 0.25), inset 0 1px rgba(255, 255, 255, 0.1);
-  }
-
-.progress,
-.plop-it {
-    &:hover {
-        -webkit-box-shadow: 10px 10px 38px 0px rgba(0,0,0,0.7);
-        -moz-box-shadow: 10px 10px 38px 0px rgba(0,0,0,0.7);
-        box-shadow: 10px 10px 38px 0px rgba(0,0,0,0.7);
-       
     }
-}
+    &:hover {
+        @extend %plopIt-hover;
+    }
+    &-skills {
+        @media (min-width: 1024px) {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            margin-left: 0;
+        }
+        margin-left: 30px;
+        margin-right: 20px;
+    }
 
-.plop-it {
-    @extend %pro-shadow;
-    background-color: rgba(160, 146, 146, 0.30);
-    font-family: 'Zen Dots', cursive;
-    // color: $white-color;
-    border-radius: 10px;
-    
-    // box-shadow: 10px 10px 28px 0px rgb(196 120 133 / 40%);
-}
-  
-  
-
-.progress {
     @media (min-width: 768px) {
         margin-left: 10px;
         margin-right: 20px;
@@ -72,15 +62,10 @@ body {
         margin-left: 20px;
         margin-right: 5px;
     }
-    margin-bottom: 15px;
-    padding-top: 5px;
+    
     
 }
 
-.progress-skills {
-    margin-left: 30px;
-    margin-right: 20px;
-}
 
 .progressBar {
     display: flex;
@@ -94,9 +79,7 @@ body {
     padding: 5px;
     height: 20px;
 }
-.skills-success {
-     background-color: $btn-link;
-}
+
 
   
 progress {
@@ -106,26 +89,29 @@ progress {
 progress::-webkit-progress-value {
     background: $progress;
   }
-  
-.skills-btn {
-    @include skillStyle;
-    background-color: $skillsBtn;
-    width: 15%;
-    transition: .6s;
-    border: none;
-    border-radius: 3px;
-    padding: 5px;
-    height: 20px;
-}
-
-.skills-prog-bar {
-    @include skillStyle;
-    background-color: rgb(202, 181, 185);
-    transition: width .6s ease;
-}
 
 .skills {
     padding: .8em 0;
+    &-success {
+        background-color: $btn-link;
+   }
+    &-btn {
+        @include skillStyle;
+        background-color: $skillsBtn;
+        width: 15%;
+        transition: .6s;
+        border: none;
+        border-radius: 3px;
+        padding: 5px;
+        height: 20px;
+    }
+    &-prog {
+        &-bar {
+            @include skillStyle;
+            background-color: rgb(202, 181, 185);
+            transition: width .6s ease;
+        }
+    }
     
 }
 
